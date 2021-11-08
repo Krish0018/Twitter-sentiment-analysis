@@ -23,56 +23,47 @@ WordCloud, STOPWORDS
 
 ### Installation
 for numpy
-'''
-import numpy as np
-'''  
+```import numpy as np```
+
 
 for Pandas
-'''
-import pandas as pd
-'''
+```import pandas as pd```
+
 
 For Matplotlib
-'''
-import matplotlib.pyplot as plt
-'''
+```import matplotlib.pyplot as plt```
+
 
 For Seaborn
-'''
-import seaborn as sns
-'''
+```import seaborn as sns```
+
 
 For Regular expression  (Used for text data)
-'''
-import re
-'''
+```import re```
+
 
 For Tweepy  (used for accessing twitter API)
-'''
-import tweepy
-'''
+```import tweepy```
+
 
 For OAuthHandler   (authenticatethe api and secret key)
-'''
-from tweepy import OAuthHandler
-'''
+```from tweepy import OAuthHandler```
+
 
 For TextBlob   (to use simple NLP task)
-'''
-from textblob import TextBlob
-'''
+```from textblob import TextBlob```
+
 
 For wordcloud and stopword
-'''
-from wordcloud import WordCloud, STOPWORDS
-'''
+```from wordcloud import WordCloud, STOPWORDS```
+
 
 
 ### Key Insights
 
 How I cleaned the all the text from twitter using regular expression.
 
-'''
+```
 def cleantwt(text):
     text = re.sub(r'@[A-Za-z0-9]+', '', text) #cleaning the '@' from text
     text = re.sub(r'#', '', text) #cleaning '#'
@@ -96,19 +87,18 @@ def remove_emoji(text):
 
 df['Tweets'] = df['Tweets'].apply(remove_emoji)
 df.head()
-'''
+```
 
 How I created Word Cloud which is the visual representation of highly frequent words
 
-'''
-stopwords = set(STOPWORDS)
+```stopwords = set(STOPWORDS)
 Words = ''.join([tweets for tweets in df['Tweets']])
 wordcloud = WordCloud(width=600, height=400, stopwords=stopwords, random_state=21, max_font_size=200).generate(Words)
 
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis('off')
 plt.show()
-'''
+```
 
 <img width="500" alt="cloud" src="https://user-images.githubusercontent.com/69238621/140746555-28bf6ae0-e9bb-4378-a7bf-1e1b86346bfe.PNG">
 
