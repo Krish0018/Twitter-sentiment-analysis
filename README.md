@@ -23,39 +23,34 @@ WordCloud, STOPWORDS
 
 ### Installation
 for numpy
-```import numpy as np```
+```pip install numpy```
 
 
 for Pandas
-```import pandas as pd```
+```pip install pandas```
 
 
 For Matplotlib
-```import matplotlib.pyplot as plt```
+```pip install matplotlib```
 
 
 For Seaborn
-```import seaborn as sns```
-
-
-For Regular expression  (Used for text data)
-```import re```
+```pip install seaborn```
 
 
 For Tweepy  (used for accessing twitter API)
-```import tweepy```
+```pip install tweepy```
 
 
-For OAuthHandler   (authenticatethe api and secret key)
-```from tweepy import OAuthHandler```
+
 
 
 For TextBlob   (to use simple NLP task)
-```from textblob import TextBlob```
+```pip install textblob```
 
 
 For wordcloud and stopword
-```from wordcloud import WordCloud, STOPWORDS```
+```pip install wordcloud```
 
 
 
